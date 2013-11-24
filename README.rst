@@ -2,11 +2,10 @@
 Tornadio
 ========
 
-If you're looking for socket.io 0.7+ integration library, check `TornadIO2 <https://github.com/MrJoes/tornadio2>`_
-
 Contributors
 ------------
 
+Forked from <https://github.com/MrJoes/tornadio>
 -  `Serge S. Koval <https://github.com/MrJoes/>`_
 
 Credits
@@ -193,7 +192,7 @@ SocketServer by default will also automatically start ioloop. In order to preven
 
   if __name__ == "__main__":
     socketio_server = SocketServer(application, auto_start=False)
-    logging.info('You can perform some actions here')    
+    logging.info('You can perform some actions here')
     ioloop.IOLoop.instance().start()
 
 

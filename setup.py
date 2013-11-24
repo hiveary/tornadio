@@ -19,18 +19,18 @@ except:
 
 setup(
     name='TornadIO',
-    version='0.0.4',
-    author='Serge S. Koval',
-    author_email='serge.koval@gmail.com',
+    version='0.0.5',
+    author='Hiveary',
+    author_email='info@hiveary.com',
     packages=['tornadio'],
     scripts=[],
-    url='http://github.com/MrJoes/tornadio/',
+    url='http://github.com/hiveary/tornadio/',
     license=license,
     description='Socket.io server implementation on top of Tornado framework',
     long_description=readme,
     requires=['simplejson', 'tornado'],
     install_requires=[
         'simplejson >= 2.1.0',
-        'tornado >= 1.1.0'
+        'tornado >= 3.1.1'
     ]
 )

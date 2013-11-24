@@ -5,12 +5,16 @@
 
     This module implements connection management class.
 
-    :copyright: (c) 2011 by the Serge S. Koval, see AUTHORS for more details.
+    :copyright: (c) 2011 by the Serge S. Koval,
+    :copyright: (c) 2013, Hiveary <info@hiveary.com>
+
     :license: Apache, see LICENSE for more details.
 """
-import logging, time
+import logging
+import time
 
 from tornadio import proto, periodic
+
 
 class SocketConnection(object):
     """This class represents basic connection class that you will derive
@@ -129,7 +133,7 @@ class SocketConnection(object):
     def _heartbeat(self):
         """Heartbeat callback. Sends heartbeat to the client."""
         if (self._heartbeat_delay is not None
-            and time.time() < self._heartbeat_delay):
+                and time.time() < self._heartbeat_delay):
             delay = self._heartbeat_delay
             self._heartbeat_delay = None
             return delay
