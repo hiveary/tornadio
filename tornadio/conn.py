@@ -93,7 +93,7 @@ class SocketConnection(object):
             elif msg[0] == proto.HEARTBEAT:
                 # TODO: Verify incoming heartbeats
                 logging.debug('Incoming Heartbeat')
-                self._missed_heartbeats -= 1
+                self._missed_heartbeats = 0
 
     # Heartbeat management
     def reset_heartbeat(self, interval=None):
